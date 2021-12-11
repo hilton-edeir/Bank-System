@@ -9,21 +9,26 @@ public class Banco {
 
         System.out.println("------- Bem-vindo ao Bank system -------\n");
         System.out.println("1 - Acessar a minha conta\n2 - Abrir uma conta\n3 - Sair\n");
-
+        System.out.print("Opção: ");
         int opcao_escolhida = ler.nextInt();
 
         switch(opcao_escolhida) {
             case 1 -> {
-                System.out.println("------- Bank system -------\n");
-                System.out.println("Número da conta: ");
-                int numero_conta = ler.nextInt();
-                System.out.println("Palavra-passe: ");
+                System.out.println("----------- Bank system -----------\n");
+
+                System.out.print("Número da conta: ");
+                long numero_conta = ler.nextLong();
+                ler.nextLine();
+                System.out.print("Palavra-passe: ");
                 String palavra_passe = ler.nextLine();
+
+                System.out.println("\nSaldo: 488 744,00 ECV");
             }
 
             case 2 -> {
                 System.out.println("------- Bank system -------\n");
                 System.out.println("1 - Conta corrente\n2 - Conta poupança\n3 - Voltar");
+                System.out.print("\nOpção: ");
                 int tipo_conta = ler.nextInt();
 
                 switch (tipo_conta) {
