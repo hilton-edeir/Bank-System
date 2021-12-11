@@ -26,6 +26,23 @@ public class Banco {
                 System.out.println("1 - Conta corrente\n2 - Conta poupança\n3 - Voltar");
                 int tipo_conta = ler.nextInt();
 
+                switch (tipo_conta) {
+                    case 1:
+                        System.out.println("Por implementar");
+                        //ContaCorrente conta_corrente= new ContaCorrente();
+                        break:
+                    case 2:
+                        System.out.println("w");
+                        System.out.println("Por implementar");
+                        //ContaPoupanca conta_poupanca = new ContaPoupanca();
+                        break;
+
+                    case 3:
+                        System.out.println("f");
+                        System.out.println("Por implementar");
+                        break;
+                }
+
             case 3:
                 System.exit(0);
                 break;
