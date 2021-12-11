@@ -6,6 +6,7 @@ public abstract class Conta {
     private float saldo;
     private String data_criacao;
     private boolean status_ativo;
+    Cliente cliente = new Cliente();
 
 
     public Conta(long numero, String data_criacao, float saldo, boolean status_ativo) {
