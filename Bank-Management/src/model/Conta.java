@@ -2,20 +2,11 @@ package model;
 
 public abstract class Conta {
 
-    private long numero;
-    private float saldo;
-    private String data_criacao;
-    private boolean status_ativo;
+    protected long numero;
+    protected float saldo;
+    protected String data_criacao;
+    protected boolean status_ativo;
     Cliente cliente = new Cliente();
-
-
-    public Conta(long numero, String data_criacao, float saldo, boolean status_ativo) {
-        this.numero = numero;
-        this.data_criacao  = data_criacao;
-        this.saldo = saldo;
-        this.status_ativo = status_ativo;
-    }
-
 
     public void depositar(float quantia){
         this.saldo += quantia;
@@ -61,5 +52,13 @@ public abstract class Conta {
 
     public void setStatus_ativo(boolean status_ativo) {
         this.status_ativo = status_ativo;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
