@@ -1,37 +1,34 @@
 package model;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class Banco {
 
     public static void main(String[] args) {
 
-        String[] opcoes = {"Acessar a minha conta", "Abrir uma conta"};
+        Scanner ler = new Scanner(System.in);
 
-        JOptionPane.showMessageDialog(null,"Seja bem-vindo ao Bank System",
-                "Bank System", JOptionPane.PLAIN_MESSAGE,null);
+        System.out.println("------- Bem-vindo ao Bank system -------\n");
+        System.out.println("1 - Acessar a minha conta\n2 - Abrir uma conta\n3 - Sair\n");
 
-        int opcao_escolhida = JOptionPane.showOptionDialog(null, null,"Operações",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, opcoes, opcoes[0]);
+        int opcao_escolhida = ler.nextInt();
 
+        switch(opcao_escolhida) {
+            case 1:
+                System.out.println("------- Bank system -------\n");
+                System.out.println("Número da conta: ");
+                int numero_conta = ler.nextInt();
+                System.out.println("Palavra-passe: ");
+                String palavra_passe = ler.nextLine();
+                break;
 
-        if(opcao_escolhida == 0){
-            System.out.println("Funcionalidade por implementar");
-        }
-        else if(opcao_escolhida == 1) {
+            case 2:
+                System.out.println("------- Bank system -------\n");
+                System.out.println("1 - Conta corrente\n2 - Conta poupança\n3 - Voltar");
+                int tipo_conta = ler.nextInt();
 
-            String[] contas = {"Conta Correnta", "Conta Poupança", "Voltar"};
-            int conta_escolhida = JOptionPane.showOptionDialog(null, null,"Tipo de conta",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, null, contas, contas[0]);
-
-            if(conta_escolhida == 0) {
-                System.out.println("Conta corrente");
-            }
-            else if(conta_escolhida == 1){
-                System.out.println("Conta poupança");
-            }
-            else{
-                System.out.println("Voltar");
-            }
+            case 3:
+                System.exit(0);
+                break;
         }
     }
 }
