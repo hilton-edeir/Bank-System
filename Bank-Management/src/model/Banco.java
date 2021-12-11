@@ -13,39 +13,38 @@ public class Banco {
         int opcao_escolhida = ler.nextInt();
 
         switch(opcao_escolhida) {
-            case 1:
+            case 1 -> {
                 System.out.println("------- Bank system -------\n");
                 System.out.println("Número da conta: ");
                 int numero_conta = ler.nextInt();
                 System.out.println("Palavra-passe: ");
                 String palavra_passe = ler.nextLine();
-                break;
+            }
 
-            case 2:
+            case 2 -> {
                 System.out.println("------- Bank system -------\n");
                 System.out.println("1 - Conta corrente\n2 - Conta poupança\n3 - Voltar");
                 int tipo_conta = ler.nextInt();
 
                 switch (tipo_conta) {
-                    case 1:
-                        System.out.println("Por implementar");
-                        //ContaCorrente conta_corrente= new ContaCorrente();
-                        break:
-                    case 2:
+                    case 1 -> System.out.println("Por implementar");
+
+                    //ContaCorrente conta_corrente= new ContaCorrente();
+                    case 2 -> {
                         System.out.println("w");
                         System.out.println("Por implementar");
-                        //ContaPoupanca conta_poupanca = new ContaPoupanca();
-                        break;
-
-                    case 3:
+                    }
+                    //ContaPoupanca conta_poupanca = new ContaPoupanca();
+                    case 3 -> {
                         System.out.println("f");
                         System.out.println("Por implementar");
-                        break;
+                    }
                 }
+            }
 
-            case 3:
+            case 3 -> {
                 System.exit(0);
-                break;
+            }
         }
     }
 }
