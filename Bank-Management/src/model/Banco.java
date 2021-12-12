@@ -33,9 +33,27 @@ public class Banco {
 
                 switch (tipo_conta) {
                     case 1 -> {
-                        System.out.println("Por implementar");
+                        System.out.println("----------- Abrir conta -----------\n");
+                        System.out.println("Tipo: Conta corrente\n");
+
+                        System.out.print("CNI: ");
                         String cni = ler.nextLine();
-                        Cliente cliente = new Cliente();
+
+                        System.out.print("Nome: ");
+                        String nome = ler.nextLine();
+
+                        System.out.print("Apelido: ");
+                        String apelido = ler.nextLine();
+
+                        System.out.print("Data nascimento: ");
+                        String data_nasc = ler.nextLine();
+
+                        System.out.print("Telemóvel: ");
+                        String telemovel = ler.nextLine();
+
+                        Cliente cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
+
+
                         //ContaCorrente conta_corrente= new ContaCorrente();
                     }
 
