@@ -6,6 +6,7 @@ public abstract class Conta {
     private float saldo;
     private String data_criacao;
     private boolean status_ativo;
+    private String palavra_passe;
     Cliente cliente = new Cliente();
 
     public Conta(long numero, String data_criacao, float saldo, boolean status_ativo, Cliente cliente) {
@@ -68,5 +69,13 @@ public abstract class Conta {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public String getPalavra_passe() {
+        return palavra_passe;
+    }
+
+    public void setPalavra_passe(String palavra_passe) {
+        this.palavra_passe = palavra_passe;
     }
 }

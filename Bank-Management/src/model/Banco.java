@@ -37,7 +37,7 @@ public class Banco {
                     case 1 -> {
                         System.out.println("----------- Abrir conta -----------\n");
                         System.out.println("Tipo: Conta corrente\n");
-
+                        ler.nextLine();
                         System.out.print("CNI: ");
                         String cni = ler.nextLine();
 
@@ -58,6 +58,33 @@ public class Banco {
                         long numero_aleatorio = (long) Math.floor(Math.random()  * (99999999 - 100000 + 1) + 100000);
 
                         ContaCorrente conta_corrente = new ContaCorrente(numero_aleatorio, date_atual.toString(), 0, true, cliente);
+
+                        System.out.println("\nNúmero de conta: " + conta_corrente.getNumero());
+
+                        System.out.print("\nInsira palavra-passe: ");
+                        String palavra_passe = ler.nextLine();
+
+                        System.out.print("\nConfirmar palavra-passe: ");
+                        String confirmar_palavra_passe = ler.nextLine();
+
+                        while(!(confirmar_palavra_passe.equals(palavra_passe))) {
+                            System.out.println("-- Falha na confirmação ---");
+                            System.out.print("\nInsira palavra-passe: ");
+                            palavra_passe = ler.nextLine();
+
+                            System.out.print("\nConfirmar palavra-passe: ");
+                            confirmar_palavra_passe = ler.nextLine();
+                        }
+
+                        conta_corrente.setPalavra_passe(palavra_passe);
+
+                        System.out.println("\n---- Sua conta foi criada com sucesso ----\n");
+                        System.out.println("Cliente: " + conta_corrente.getCliente().getNome() + conta_corrente.getCliente().getApelido());
+                        System.out.println("Conta: " + conta_corrente.getNumero());
+                        System.out.println("Status: " + conta_corrente.isStatus_ativo());
+                        System.out.println("Data Criação: " + conta_corrente.getData_criacao());
+                        System.out.println("Saldo: " + conta_corrente.getSaldo());
+                        System.out.println("Palavra-passe: " + conta_corrente.getPalavra_passe());
                     }
 
                     case 2 -> {
