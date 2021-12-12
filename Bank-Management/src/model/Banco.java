@@ -1,4 +1,5 @@
 package model;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Banco {
@@ -6,6 +7,7 @@ public class Banco {
     public static void main(String[] args) {
 
         Scanner ler = new Scanner(System.in);
+        Date date_atual = new Date();
 
         System.out.println("------- Bem-vindo ao Bank system -------\n");
         System.out.println("1 - Acessar conta\n2 - Abrir conta\n3 - Sair\n");
@@ -53,8 +55,9 @@ public class Banco {
 
                         Cliente cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
 
+                        long numero_aleatorio = (long) Math.floor(Math.random()  * (99999999 - 100000 + 1) + 100000);
 
-                        //ContaCorrente conta_corrente= new ContaCorrente();
+                        ContaCorrente conta_corrente = new ContaCorrente(numero_aleatorio, date_atual.toString(), 0, true, cliente);
                     }
 
                     case 2 -> {
