@@ -61,29 +61,29 @@ public class Banco {
 
                         System.out.println("\nNúmero de conta: " + conta_corrente.getNumero());
 
-                        System.out.print("\nInsira palavra-passe: ");
+                        System.out.print("Insira palavra-passe: ");
                         String palavra_passe = ler.nextLine();
 
-                        System.out.print("\nConfirmar palavra-passe: ");
+                        System.out.print("Confirmar palavra-passe: ");
                         String confirmar_palavra_passe = ler.nextLine();
 
                         while(!(confirmar_palavra_passe.equals(palavra_passe))) {
-                            System.out.println("-- Falha na confirmação ---");
-                            System.out.print("\nInsira palavra-passe: ");
+                            System.out.print("-- Falha na confirmação ---\n\n");
+                            System.out.print("Insira palavra-passe: ");
                             palavra_passe = ler.nextLine();
 
-                            System.out.print("\nConfirmar palavra-passe: ");
+                            System.out.print("Confirmar palavra-passe: ");
                             confirmar_palavra_passe = ler.nextLine();
                         }
 
                         conta_corrente.setPalavra_passe(palavra_passe);
 
                         System.out.println("\n---- Sua conta foi criada com sucesso ----\n");
-                        System.out.println("Cliente: " + conta_corrente.getCliente().getNome() + conta_corrente.getCliente().getApelido());
+                        System.out.println("Cliente: " + conta_corrente.getCliente().getNome() + " " + conta_corrente.getCliente().getApelido());
                         System.out.println("Conta: " + conta_corrente.getNumero());
                         System.out.println("Status: " + conta_corrente.isStatus_ativo());
                         System.out.println("Data Criação: " + conta_corrente.getData_criacao());
-                        System.out.println("Saldo: " + conta_corrente.getSaldo());
+                        System.out.println("Saldo: " + conta_corrente.getSaldo() + " ECV");
                         System.out.println("Palavra-passe: " + conta_corrente.getPalavra_passe());
                     }
 
