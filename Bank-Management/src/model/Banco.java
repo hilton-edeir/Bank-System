@@ -33,7 +33,7 @@ public class Banco {
                     System.out.print("Palavra-passe: ");
                     String palavra_passe = ler.nextLine();
 
-                    while (!(palavra_passe.equals(conta_corrente.getPalavra_passe()) {
+                    while (!(palavra_passe.equals(conta_corrente.getPalavra_passe()))) {
                         System.out.println("---- Palavra-passe incorreta ----");
                         System.out.print("Palavra-passe: ");
                         palavra_passe = ler.nextLine();
