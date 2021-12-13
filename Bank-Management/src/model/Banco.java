@@ -149,11 +149,11 @@ public class Banco {
 
                             System.out.println("\n---- Sua conta foi criada com sucesso ----\n");
                             System.out.println("Cliente: " + conta_poupanca.getCliente().getNome() + " " + conta_poupanca.getCliente().getApelido());
-                            System.out.println("Conta: " + conta_corrente.getNumero());
-                            System.out.println("Status: " + conta_corrente.isStatus_ativo());
-                            System.out.println("Data Criação: " + conta_corrente.getData_criacao());
-                            System.out.println("Saldo: " + conta_corrente.getSaldo() + " ECV");
-                            System.out.println("Palavra-passe: " + conta_corrente.getPalavra_passe());
+                            System.out.println("Conta: " + conta_poupanca.getNumero());
+                            System.out.println("Status: " + conta_poupanca.isStatus_ativo());
+                            System.out.println("Data Criação: " + conta_poupanca.getData_criacao());
+                            System.out.println("Saldo: " + conta_poupanca.getSaldo() + " ECV");
+                            System.out.println("Palavra-passe: " + conta_poupanca.getPalavra_passe());
                         }
 
                         case 3 -> {
