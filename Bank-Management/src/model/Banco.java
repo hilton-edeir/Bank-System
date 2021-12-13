@@ -137,6 +137,9 @@ public class Banco {
                             String confirmar_palavra_passe = ler.nextLine();
 
                             while (!(confirmar_palavra_passe.equals(palavra_passe))) {
+                                System.out.print("-- Falha na confirmação ---\n\n");
+                                System.out.print("Insira palavra-passe: ");
+                                palavra_passe = ler.nextLine();
 
 
                             }
