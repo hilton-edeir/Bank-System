@@ -10,6 +10,7 @@ public class Banco {
         Date date_atual = new Date();
         Cliente cliente;
         ContaCorrente conta_corrente = null;
+        ContaPoupanca conta_poupanca = null;
 
         while(true) {
             System.out.println("------- Bem-vindo ao Bank system -------\n");
@@ -103,9 +104,56 @@ public class Banco {
                         }
 
                         case 2 -> {
-                            System.out.println("w");
-                            System.out.println("Por implementar");
-                            //ContaPoupanca conta_poupanca = new ContaPoupanca();
+                            System.out.println("----------- Abrir conta -----------\n");
+                            System.out.println("Tipo: Conta poupança\n");
+                            ler.nextLine();
+                            System.out.print("CNI: ");
+                            String cni = ler.nextLine();
+
+                            System.out.print("Nome: ");
+                            String nome = ler.nextLine();
+
+                            System.out.print("Apelido: ");
+                            String apelido = ler.nextLine();
+
+                            System.out.print("Data nascimento: ");
+                            String data_nasc = ler.nextLine();
+
+                            System.out.print("Telemóvel: ");
+                            String telemovel = ler.nextLine();
+
+                            cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
+
+                            long numero_aleatorio = (long) Math.floor(Math.random() * (99999999 - 100000 + 1) + 100000);
+
+                            conta_poupanca= new ContaPoupanca(numero_aleatorio, date_atual.toString(), 0, true, cliente);
+
+                            System.out.println("\nNúmero de conta: " + conta_poupanca.getNumero());
+
+                            System.out.print("Insira palavra-passe: ");
+                            String palavra_passe = ler.nextLine();
+
+                            System.out.print("Confirmar palavra-passe: ");
+                            String confirmar_palavra_passe = ler.nextLine();
+
+                            while (!(confirmar_palavra_passe.equals(palavra_passe))) {
+                                System.out.print("-- Falha na confirmação ---\n\n");
+                                System.out.print("Insira palavra-passe: ");
+                                palavra_passe = ler.nextLine();
+
+                                System.out.print("Confirmar palavra-passe: ");
+                                confirmar_palavra_passe = ler.nextLine();
+                            }
+
+                            conta_poupanca.setPalavra_passe(palavra_passe);
+
+                            System.out.println("\n---- Sua conta foi criada com sucesso ----\n");
+                            System.out.println("Cliente: " + conta_poupanca.getCliente().getNome() + " " + conta_poupanca.getCliente().getApelido());
+                            System.out.println("Conta: " + conta_corrente.getNumero());
+                            System.out.println("Status: " + conta_corrente.isStatus_ativo());
+                            System.out.println("Data Criação: " + conta_corrente.getData_criacao());
+                            System.out.println("Saldo: " + conta_corrente.getSaldo() + " ECV");
+                            System.out.println("Palavra-passe: " + conta_corrente.getPalavra_passe());
                         }
 
                         case 3 -> {
@@ -120,5 +168,9 @@ public class Banco {
                 }
             }
         }
+    }
+
+    public void formulario(){
+
     }
 }
