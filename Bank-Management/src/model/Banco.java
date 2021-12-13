@@ -9,6 +9,7 @@ public class Banco {
         Scanner ler = new Scanner(System.in);
         Date date_atual = new Date();
         Cliente cliente;
+        ContaCorrente conta_corrente = null;
 
         System.out.println("------- Bem-vindo ao Bank system -------\n");
         System.out.println("1 - Acessar conta\n2 - Abrir conta\n3 - Sair\n");
@@ -21,9 +22,18 @@ public class Banco {
 
                 System.out.print("Número da conta: ");
                 long numero_conta = ler.nextLong();
+
+                while(numero_conta != conta_corrente.getNumero()){
+                    System.out.println("---- Esta conta não existe ----");
+                    System.out.print("Número da conta: ");
+                    numero_conta = ler.nextLong();
+                }
                 ler.nextLine();
                 System.out.print("Palavra-passe: ");
                 String palavra_passe = ler.nextLine();
+
+
+
 
                 System.out.println("\nSaldo: 488 744,00 ECV");
             }
@@ -58,7 +68,7 @@ public class Banco {
 
                         long numero_aleatorio = (long) Math.floor(Math.random()  * (99999999 - 100000 + 1) + 100000);
 
-                        ContaCorrente conta_corrente = new ContaCorrente(numero_aleatorio, date_atual.toString(), 0, true, cliente);
+                        conta_corrente = new ContaCorrente(numero_aleatorio, date_atual.toString(), 0, true, cliente);
 
                         System.out.println("\nNúmero de conta: " + conta_corrente.getNumero());
 
