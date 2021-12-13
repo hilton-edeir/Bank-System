@@ -104,13 +104,6 @@ public class Banco {
                         }
 
                         case 2 -> {
-                            System.out.println("----------- Abrir conta -----------\n");
-                            System.out.println("Tipo: Conta poupança\n");
-                            ler.nextLine();
-                            System.out.print("CNI: ");
-                            String cni = ler.nextLine();
-
-
 
                         }
 
