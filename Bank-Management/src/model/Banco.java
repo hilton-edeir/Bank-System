@@ -116,14 +116,6 @@ public class Banco {
                             System.out.print("Apelido: ");
                             String apelido = ler.nextLine();
 
-                            System.out.print("Data nascimento: ");
-                            String data_nasc = ler.nextLine();
-
-                            System.out.print("Telemóvel: ");
-                            String telemovel = ler.nextLine();
-
-                            cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
-
 
 
                         }
