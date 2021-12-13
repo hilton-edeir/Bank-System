@@ -145,7 +145,6 @@ public class Banco {
                                 confirmar_palavra_passe = ler.nextLine();
                             }
 
-                            conta_poupanca.setPalavra_passe(palavra_passe);
 
                         }
 
