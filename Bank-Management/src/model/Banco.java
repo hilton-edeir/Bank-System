@@ -32,7 +32,9 @@ public class Banco {
                 System.out.print("Palavra-passe: ");
                 String palavra_passe = ler.nextLine();
 
-
+                while(palavra_passe != conta_corrente.getPalavra_passe()){
+                    System.out.println("---- Palavra-passe incorreta ----");
+                }
 
 
                 System.out.println("\nSaldo: 488 744,00 ECV");
