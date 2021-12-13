@@ -128,13 +128,6 @@ public class Banco {
 
                             conta_poupanca= new ContaPoupanca(numero_aleatorio, date_atual.toString(), 0, true, cliente);
 
-                            System.out.println("\nNúmero de conta: " + conta_poupanca.getNumero());
-
-                            System.out.print("Insira palavra-passe: ");
-                            String palavra_passe = ler.nextLine();
-
-                            System.out.print("Confirmar palavra-passe: ");
-                            String confirmar_palavra_passe = ler.nextLine();
 
                         }
 
