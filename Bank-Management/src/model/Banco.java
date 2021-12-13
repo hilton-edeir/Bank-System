@@ -8,6 +8,7 @@ public class Banco {
 
         Scanner ler = new Scanner(System.in);
         Date date_atual = new Date();
+        Cliente cliente;
 
         System.out.println("------- Bem-vindo ao Bank system -------\n");
         System.out.println("1 - Acessar conta\n2 - Abrir conta\n3 - Sair\n");
@@ -53,7 +54,7 @@ public class Banco {
                         System.out.print("Telemóvel: ");
                         String telemovel = ler.nextLine();
 
-                        Cliente cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
+                        cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
 
                         long numero_aleatorio = (long) Math.floor(Math.random()  * (99999999 - 100000 + 1) + 100000);
 
