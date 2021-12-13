@@ -147,9 +147,6 @@ public class Banco {
 
                             conta_poupanca.setPalavra_passe(palavra_passe);
 
-                            System.out.println("\n---- Sua conta foi criada com sucesso ----\n");
-                            System.out.println("Cliente: " + conta_poupanca.getCliente().getNome() + " " + conta_poupanca.getCliente().getApelido());
-
                         }
 
                         case 3 -> {
