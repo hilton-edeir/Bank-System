@@ -152,7 +152,6 @@ public class Banco {
                             System.out.println("Conta: " + conta_poupanca.getNumero());
                             System.out.println("Status: " + conta_poupanca.isStatus_ativo());
                             System.out.println("Data Criação: " + conta_poupanca.getData_criacao());
-                            System.out.println("Saldo: " + conta_poupanca.getSaldo() + " ECV");
                         }
 
                         case 3 -> {
