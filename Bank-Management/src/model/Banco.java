@@ -124,9 +124,6 @@ public class Banco {
 
                             cliente = new Cliente(cni, nome, apelido, data_nasc, telemovel);
 
-                            long numero_aleatorio = (long) Math.floor(Math.random() * (99999999 - 100000 + 1) + 100000);
-
-                            conta_poupanca= new ContaPoupanca(numero_aleatorio, date_atual.toString(), 0, true, cliente);
 
 
                         }
