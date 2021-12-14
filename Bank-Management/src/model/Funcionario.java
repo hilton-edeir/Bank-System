@@ -57,4 +57,28 @@ public class Funcionario {
         this.telemovel = telemovel;
     }
 
+
+    public String getCNI() {
+        return CNI;
+    }
+
+    public void setCNI(String CNI) {
+        this.CNI = CNI;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
 }
