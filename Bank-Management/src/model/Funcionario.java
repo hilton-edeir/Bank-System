@@ -81,20 +81,4 @@ public class Funcionario {
     public void setApelido(String apelido) {
         this.apelido = apelido;
     }
-
-    public String getData_nasc() {
-        return data_nasc;
-    }
-
-    public void setData_nasc(String data_nasc) {
-        this.data_nasc = data_nasc;
-    }
-
-    public String getTelemovel() {
-        return telemovel;
-    }
-
-    public void setTelemovel(String telemovel) {
-        this.telemovel = telemovel;
-    }
 }
